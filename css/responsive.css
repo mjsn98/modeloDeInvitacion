@@ -167,7 +167,7 @@
     font-size:45px
   }
 
-  section.ceremonia-fiesta .col-ceremonia .anim-anillos, section.ceremonia-fiesta .anim-fiesta,section.ceremonia-fiesta .anim-civil{
+  section.ceremonia-fiesta .col-ceremonia .anim-anillos, section.ceremonia-fiesta .anim-fiesta,section.ceremonia-fiesta .col-civil .anim-civil{
     width: 50%;
     height:auto;
   }

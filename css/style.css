@@ -648,7 +648,7 @@
     z-index: 999;
   }
   
-  section.ceremonia-fiesta .col-ceremonia .anim-anillos, section.ceremonia-fiesta .anim-fiesta,section.ceremonia-fiesta .anim-civil{
+  section.ceremonia-fiesta .col-ceremonia .anim-anillos, section.ceremonia-fiesta .col-fiesta .anim-fiesta,section.ceremonia-fiesta .col-civil .anim-civil{
     width: 200px;
     height:200px;
     margin: 0 auto 20px;
@@ -668,7 +668,7 @@
   }
   
   
-  section.ceremonia-fiesta .col-ceremonia h3:after, section.ceremonia-fiesta .col-fiesta h3:after{
+  section.ceremonia-fiesta .col-ceremonia h3:after, section.ceremonia-fiesta .col-fiesta h3:after, section.ceremonia-fiesta .col-civil h3:after{
     background-image: url(../img/img_cinta02.svg);
     position: absolute;
     content: '';
@@ -681,7 +681,7 @@
     top: 0;
   }
   
-  section.ceremonia-fiesta .col-ceremonia h3:before, section.ceremonia-fiesta .col-fiesta h3:before{
+  section.ceremonia-fiesta .col-ceremonia h3:before, section.ceremonia-fiesta .col-fiesta h3:before,section.ceremonia-fiesta .col-civil h3:before{
     background-image: url(../img/img_cinta01.svg);
     position: absolute;
     content: '';
@@ -1303,7 +1303,6 @@
     box-shadow: 0px 0px 15px 0px #000;
   
   }
-  
   .modal .modal-content-2 {
     position: relative;
     border: double 2px transparent;
