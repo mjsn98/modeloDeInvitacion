@@ -126,7 +126,9 @@
 
 <body class="" cz-shortcut-listen="true" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
 
-
+    <audio autoplay loop id="musicMP3">
+        <source src="/public/mp3/ifaintgotyou.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- Loader -->
     <!-- START PRELOADER AREA-->
@@ -626,66 +628,11 @@
     <!-- Musica -->
 
 
-    <div id="controlador-musica">
+    <div id="controlador-musica" onclick="playAudio()">
         <div id="play-pause-music" data-estado-music="pause" class="music-anim-icon"></div>
     </div>
 
     <div id="player"></div>
-
-    <script src="https://www.youtube.com/iframe_api"></script>
-
-    <script>
-        var player;
-
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '315',
-                width: '560',
-                videoId: 'Urdlvw0SSEc&list=RDUrdlvw0SSEc&start_radio=1',
-                playerVars: {
-                    'autoplay': 0,
-                    'controls': 0,
-                    'disablekb': 1,
-                    'fs': 0,
-                    'iv_load_policy': 3,
-                    'modestbranding': 1,
-                    'rel': 0,
-                    'showinfo': 0,
-                    'origin': 'http://localhost:3001'
-                },
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            var playPauseButton = document.getElementById('play-pause-music');
-
-            playPauseButton.addEventListener('click', function () {
-                if (player.getPlayerState() == YT.PlayerState.PAUSED ||
-                    player.getPlayerState() == YT.PlayerState.ENDED) {
-                    player.playVideo();
-                    playPauseButton.setAttribute('data-estado-music', 'play');
-                } else {
-                    player.pauseVideo();
-                    playPauseButton.setAttribute('data-estado-music', 'pause');
-                }
-            });
-        }
-
-        function onPlayerStateChange(event) {
-            var playPauseButton = document.getElementById('play-pause-music');
-
-            if (event.data == YT.PlayerState.PLAYING) {
-                playPauseButton.setAttribute('data-estado-music', 'play');
-            } else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
-                playPauseButton.setAttribute('data-estado-music', 'pause');
-            }
-        }
-    </script>
-
 
     <!-- Modal confirmar -->
     <div id="modalAsistencia" class="modal fade" tabindex="-1">
@@ -1034,7 +981,7 @@
             wrapper: svgContainerLoader,
             animType: 'svg',
             loop: true,
-            path:"/public/img/corazon.json"
+            path: "/public/img/corazon.json"
         });
     </script>
 
@@ -1096,90 +1043,10 @@
     <!-- Modal musica inicio -->
 
     <script>
-        // Btn play music modal
-        $('body').on('click', '#play-music-modal', function (e) {
-
-            e.preventDefault();
-
-            $('#play-pause-music').attr('data-estado-music', 'play');
-            animMusicAnimIcon.play();
-            player.playVideo();
-
-        });
+        function playAudio(){
+            document.getElementById('#musicMP3').play();
+        }
     </script>
-
-
-
-    <!-- Musica de fondo -->
-    <script>
-        // 2. This code loads the IFrame Player API code asynchronously.
-        var tag = document.createElement('script');
-
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        // 3. This function creates an <iframe> (and YouTube player)
-        //    after the API code downloads.
-        var player;
-
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player-musica-fondo', {
-                height: '10',
-                width: '10',
-                playerVars: {
-                    playlist: 'EH30RAXnRWs',
-                    loop: 1
-                },
-                events: {
-                    'onReady': onPlayerReady
-                }
-            });
-        }
-
-        // 4. The API will call this function when the video player is ready.
-        function onPlayerReady(event) {
-            event.target.setVolume(80);
-            // event.target.playVideo();
-        }
-
-        // Pausar video
-        function pauseVideo() {
-            player.pauseVideo();
-        }
-
-
-        // Click en controlador musica
-        $('body').on('click', '#play-pause-music', function (e) {
-
-            e.preventDefault();
-
-            // Estado actual
-            var estadoMusic = $(this).attr('data-estado-music');
-
-            // Pause music
-            if (estadoMusic == 'pause') {
-                $(this).attr('data-estado-music', 'play');
-                animMusicAnimIcon.play();
-                player.playVideo();
-
-            }
-
-            // Play music
-            if (estadoMusic == 'play') {
-                $(this).attr('data-estado-music', 'pause');
-                animMusicAnimIcon.stop();
-                player.pauseVideo();
-
-            }
-
-
-        });
-    </script>
-
-
-
-
 
     <!-- Animaciones de diseño -->
     <script>
@@ -1190,7 +1057,7 @@
             animType: 'svg',
             autoplay: false,
             loop: true,
-            path:"/public/img/music-player-icon.json"
+            path: "/public/img/music-player-icon.json"
         });
     </script>
 
@@ -1206,7 +1073,7 @@
             wrapper: svgContainerCorazonFalta,
             animType: 'svg',
             loop: true,
-            path:"/public/img/corazon-falta.json"
+            path: "/public/img/corazon-falta.json"
         });
     </script>
 
@@ -1220,7 +1087,7 @@
             wrapper: svgContainerAnillos,
             animType: 'svg',
             loop: true,
-            path:"/public/img/img_ceremonia.json"
+            path: "/public/img/img_ceremonia.json"
         });
 
         animAnillos.play();
@@ -1235,7 +1102,7 @@
             wrapper: svgContainerGaleria,
             animType: 'svg',
             loop: true,
-            path:"/public/img/json_camara.json"
+            path: "/public/img/json_camara.json"
         });
 
         animGaleria.play();
@@ -1250,7 +1117,7 @@
             wrapper: svgContainerMusica,
             animType: 'svg',
             loop: true,
-            path:"/public/img/img_musica.json"
+            path: "/public/img/img_musica.json"
         });
 
         animMusica.play();
@@ -1266,7 +1133,7 @@
             wrapper: svgContainerVestuario,
             animType: 'svg',
             loop: true,
-            path:"/public/img/vestuario.json"
+            path: "/public/img/vestuario.json"
         });
 
         animVestuario.play();
@@ -1281,7 +1148,7 @@
             wrapper: svgContainerTips,
             animType: 'svg',
             loop: true,
-            path:"/public/img/tips.json"
+            path: "/public/img/tips.json"
         });
 
         animTips.play();
@@ -1296,7 +1163,7 @@
             wrapper: svgContainerFiesta,
             animType: 'svg',
             loop: true,
-            path:"/public/img/img_fiesta.json"
+            path: "/public/img/img_fiesta.json"
         });
 
         animFiesta.play();
@@ -1311,7 +1178,7 @@
             wrapper: svgContainerRegalos,
             animType: 'svg',
             loop: true,
-            path:"/public/img/img_regalo.json"
+            path: "/public/img/img_regalo.json"
         });
 
         animRegalos.play();
@@ -1327,7 +1194,7 @@
             wrapper: svgContainerInstagram,
             animType: 'svg',
             loop: true,
-            path:"/public/img/img_instagram.json"
+            path: "/public/img/img_instagram.json"
         });
 
         animInstagram.play();
@@ -1514,7 +1381,7 @@
         }
 
         $('.instagram').parallax({
-            imageSrc:imageInstagramParallax
+            imageSrc: imageInstagramParallax
         });
     </script>
 
