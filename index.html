@@ -435,7 +435,7 @@
                     <p class="subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
                 </div>
 
-                <div class="col-md-4 item-fiesta">
+                <div class="col-md-6 item-fiesta">
 
 
                     <picture>
@@ -590,7 +590,7 @@
 
 
 
-                <div class="col-md-6 col-nombres-footer d-flex justify-content-end align-items-center">
+                <div class="col-md-12 col-nombres-footer d-flex justify-content-end align-items-center">
 
                     <h4>
                         Santillán
@@ -635,9 +635,13 @@
         title="Ed Sheeran - Thinking out loud" width="10" height="10"
         src="https://www.youtube.com/embed/?playlist=EH30RAXnRWs&amp;loop=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.fixdate.io&amp;widgetid=1"></iframe>
 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Urdlvw0SSEc?si=Fb1ychiB5lShj7qG"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
 
     <!-- Modal confirmar -->
-    <div id="modalConfirmarInvitacion" class="modal fade" tabindex="-1">
+    <div id="modalAsistencia" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-md modal-dialog-centered">
             <div class="modal-content confirmar-modal">
                 <div class="modal-content-2 confirmar-modal-2">
@@ -669,7 +673,6 @@
                         <div class="white-circle-icon">
                             <img class="" src="/img/img_circuloCanciones.svg" alt="">
                         </div>
-
 
                     </div>
 
@@ -864,7 +867,7 @@
 
                     <div class="img-top-modal d-flex justify-content-center align-items-start">
 
-                        <button type="button" class="close" data-dismissgoogle="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
 
@@ -1043,16 +1046,9 @@
         });
     </script>
 
-
-
-
-
-
-
     <!-- Modal musica inicio -->
 
     <script>
-
         // Btn play music modal
         $('body').on('click', '#play-music-modal', function (e) {
 
@@ -1125,8 +1121,9 @@
             // Play music
             if (estadoMusic == 'play') {
                 $(this).attr('data-estado-music', 'pause');
-                player.pauseVideo();
                 animMusicAnimIcon.stop();
+                player.pauseVideo();
+
             }
 
 
@@ -1290,40 +1287,6 @@
     </script>
 
 
-    <!-- Opciones carrusel galeria -->
-    <script>
-        $('.carrusel').slick({
-            lazyLoad: 'ondemand',
-            autoplay: true,
-            autoplaySpeed: 2000,
-            centerMode: true,
-            dots: true,
-            centerPadding: '20px',
-            slidesToShow: 3,
-            prevArrow: false,
-            nextArrow: false,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-            ]
-        });
-    </script>
-
 
     <!-- Modal Confirmar asistencia -->
     <script>
@@ -1337,21 +1300,15 @@
 
             var evento = $(this).attr('data-evento');
 
-            $('#eventoAsistencia').val(evento);
-
-
             if (evento == 'Fiesta') {
                 var titleModalAsistencia = lang_titleModalAsistenciaFiesta;
-                var rutaImgModalAsistencia = _pathProducto + 'img/img_circuloFiesta.svg';
             }
 
             if (evento == 'Ceremonia') {
                 var titleModalAsistencia = lang_titleModalAsistenciaCeremonia;
-                var rutaImgModalAsistencia = _pathProducto + 'img/img_circuloCeremonia.svg';
             }
 
             $('#modalAsistencia .modal-title').text(titleModalAsistencia);
-            $('#modalAsistencia .img-top-modal img').attr('src', rutaImgModalAsistencia);
 
 
             $('#modalAsistencia').modal({
@@ -1360,54 +1317,6 @@
 
         });
 
-
-        // Validacion de form.
-        function isOkAsistencia() {
-
-            // Remuevo mensajes de error anteriores
-            $("#error-form").remove();
-
-            // Variables necesarias para la validacion
-            var flag = true;
-            var err = '';
-
-
-            // Variables del form para validar.
-            var asistenteName = $.trim($("#nombreAsistente").val());
-            var asistenteComentarios = $.trim($("#comentariosAsistente").val());
-
-
-            // Nombre
-            if (asistenteName == '') {
-                flag = false;
-                err = lang_nombreRequerido;
-            } else {
-                if (asistenteName.length > 20) {
-                    flag = false;
-                    err = lang_caracteresNombreAsistencia;
-                }
-            }
-
-            // Comentarios
-            if (asistenteComentarios != '') {
-                if (asistenteComentarios.length > 100) {
-                    flag = false;
-                    err = lang_caracteresComentariosAsistencia;
-                }
-            }
-
-            // Si hay error
-            if (flag === false) {
-
-                // Imprimo el error
-                $('#formAsistencia').after('<span id="error-form">' + err + '</span>');
-
-            }
-
-            // Retorno el estado de la validacion
-            return flag;
-
-        }
 
 
     </script>
@@ -1452,25 +1361,6 @@
                 $('.falta').text('');
             }
         }, 1000);
-    </script>
-
-
-    <!-- Modal sugerir cancion -->
-    <script>
-        // Abrir modal
-        $('body').on('click', 'a.confirmar-invitacion', function (e) {
-
-            e.preventDefault();
-
-            // Remuevo mensajes de error anteriores
-            $("#error-form").remove();
-
-            $('#modalConfirmarInvitacion').modal({
-                backdrop: 'static'
-            })
-
-        });
-
     </script>
 
 
