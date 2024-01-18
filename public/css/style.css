@@ -81,14 +81,14 @@
   }
   
   .boton{
+    color: #3f3f3d;
+    font-size: larger;
+    font-weight: 600;
+    font-family: monospace;
     background: var(--color-3);
-    color: #fff;
     text-transform: capitalize;
-    font-family: var(--fuente-2);
-    font-weight:300;
     border-radius: 50px;
     line-height: 15px;
-    font-size: 17px;
     padding: 18px 30px;
   
     -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.40);
@@ -711,8 +711,8 @@
   }
   
   section.ceremonia-fiesta .info-col .info-box p{
-    font-family: var(--fuente-2);
-    font-weight:--grosor-fuente-regular;
+    font-family: inherit;
+    font-weight:200;
     color: var(--color-4);
     font-size: 20px;
   }
@@ -741,7 +741,7 @@
   }
   
   section.ceremonia-fiesta .addeventatc .nameBtn{
-    color: #fff;
+    color: #3f3f3d;
   }
   
   section.ceremonia-fiesta .addeventatc:hover .nameBtn{
