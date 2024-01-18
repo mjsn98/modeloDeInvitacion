@@ -126,7 +126,7 @@
 
 <body class="" cz-shortcut-listen="true" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
 
-    <audio autoplay loop id="musicMP3">
+    <audio autoplay loop id="musicMP3" data-evento="play">
         <source src="/public/mp3/ifaintgotyou.mp3" type="audio/mpeg">
     </audio>
 
@@ -360,14 +360,14 @@
 
                         <div class="info-box">
                             <h6>Lugar</h6>
-                            <p>Parroquia xxxxx</p>
+                            <p>A confirmar</p>
                             <a href="#" data-evento="Ceremonia" class="boton confirmar-asistencia">Confirmar
                                 asistencia</a>
                         </div>
 
                         <div class="info-box">
                             <h6>Dirección</h6>
-                            <p>XXXXXXX</p>
+                            <p>A confirmar</p>
                             <a href="#" data-evento="Ceremonia" class="boton modal-como-llegar">¿Cómo llegar?</a>
                         </div>
 
@@ -435,29 +435,12 @@
                 <div class="col-md-12">
                     <h2 class="title">Fiesta</h2>
                     <p class="subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+                    <br>
                 </div>
+                
+                <!-- Confirmed modal -->
+                <!-- <div class="col-md-6 item-fiesta">
 
-                <div class="col-md-6 item-fiesta">
-
-
-                    <picture>
-                        <source type="image/webp"
-                            srcset="https://www.fixdate.io/modelo-invitacion/49/public/img/flores_Grupo03_A.webp">
-                        <source type="image/png"
-                            srcset="https://www.fixdate.io/modelo-invitacion/49/public/img/flores_Grupo03_A.png">
-                        <img class="adorno adorno-1"
-                            src="https://www.fixdate.io/modelo-invitacion/49/public/img/flores_Grupo03_A.png" alt="">
-                    </picture>
-
-
-                    <picture>
-                        <source type="image/webp"
-                            srcset="https://www.fixdate.io/modelo-invitacion/49/public/img/flores_Grupo03_B.webp">
-                        <source type="image/png"
-                            srcset="https://www.fixdate.io/modelo-invitacion/49/public/img/flores_Grupo03_B.png">
-                        <img class="adorno adorno-2"
-                            src="https://www.fixdate.io/modelo-invitacion/49/public/img/flores_Grupo03_B.png" alt="">
-                    </picture>
 
 
                     <div
@@ -475,10 +458,29 @@
 
                     </div>
 
-                </div>
+                </div> -->
 
                 <!-- Dress Code -->
                 <div class="col-md-6 item-fiesta">
+
+                    <picture>
+                        <source type="image/webp"
+                            srcset="/public/img/flores_Grupo03_A.webp">
+                        <source type="image/png"
+                            srcset="/public/img/flores_Grupo03_A.png">
+                        <img class="adorno adorno-1"
+                            src="/public/img/flores_Grupo03_A.png" alt="">
+                    </picture>
+
+
+                    <picture>
+                        <source type="image/webp"
+                            srcset="/public/img/flores_Grupo03_B.webp">
+                        <source type="image/png"
+                            srcset="/public/img/flores_Grupo03_B.png">
+                        <img class="adorno adorno-2"
+                            src="/public/img/flores_Grupo03_B.png" alt="">
+                    </picture>
 
                     <div
                         class="w-100 content-item-fiesta d-flex flex-column justify-content-between align-items-center">
@@ -704,7 +706,7 @@
                     <br>
                     <div class="modal-footer">
                         <button type="button" class="boton"><a href="https://forms.gle/gEjZx6RJRSx68tVE6"
-                                class="text-white" target="_blank">Ir al Formulario</a></button>
+                                class="text-white" target="_blank">Asistiré 🥳</a></button>
                     </div>
 
                 </div>
@@ -1043,8 +1045,19 @@
     <!-- Modal musica inicio -->
 
     <script>
-        function playAudio(){
-            document.getElementById('#musicMP3').play();
+
+        function playAudio() {
+            var audio = document.getElementById('musicMP3');
+            var icon = document.getElementById('play-pause-music');
+
+            if (audio.paused) {
+                audio.play();
+                animMusicAnimIcon.play();
+            } else {
+                audio.pause();
+                animMusicAnimIcon.pause();
+            }
+
         }
     </script>
 
@@ -1342,10 +1355,11 @@
             }
 
             if (evento == 'Ceremonia') {
-                var titleModalMapa = 'Ceremonia';
+                $('#modalMapa .modal-title').text('Ceremonia');
 
-                var latitudMapa = latitudCeremonia;
-                var longitudMapa = longitudCeremonia;
+                $('#modalMapa .modal-body').html('');
+
+                $('.ampliar-mapa').attr('href', '');
             }
 
             $('#modalMapa').modal({
