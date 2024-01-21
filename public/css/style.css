@@ -1,4 +1,7 @@
 /* Generales */
+* {
+  font-size: 16px;
+}
 
 :root {
 
@@ -47,7 +50,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background:var(--color-4);
+  background: var(--color-4);
 }
 
 .custom-control-label::before {
@@ -76,7 +79,7 @@
 }
 
 .fancybox-bg {
-  background:var(--color-2) !important;
+  background: var(--color-2) !important;
 }
 
 .boton {
@@ -98,10 +101,12 @@
   -o-transition: all 0.5s 0s ease;
   transition: all 0.5s 0s ease;
 }
-.h2-modal{
+
+.h2-modal {
   font-family: initial;
-  color:#6f502f;
+  color: #6f502f;
 }
+
 .boton:hover {
   background: var(--color-5);
   text-decoration: none;
@@ -143,8 +148,8 @@ a {
 
 /* Fondo modales */
 .modal-backdrop {
-  background:var(--color-5);
-  
+  background: var(--color-5);
+
 }
 
 .modal-body {
@@ -242,7 +247,7 @@ a {
 
 .preloader-area {
   position: fixed;
-  background:url(/public/img/pattern_fondo.png) repeat top center;
+  background: url(/public/img/pattern_fondo.png) repeat top center;
   z-index: 11000;
   height: 100%;
   width: 100%;
@@ -322,7 +327,7 @@ section.portada .portada-picture::after {
 }
 
 section.portada::after {
-  background-image: url('../img/img_ondas0.svg');
+  background-image: url('../img/img_ondas01.svg');
   position: absolute;
   content: '';
   background-repeat: no-repeat;
@@ -462,6 +467,7 @@ section.portada .box-nombres-fecha-portada h1+span {
   font-weight: var(--grosor-fuente-regular);
   color: #ffffff;
 }
+
 section.portada .box-frase-portada {
   margin-top: 25px;
 }
@@ -490,7 +496,7 @@ ul.lang-inv li {
 }
 
 ul.lang-inv li a {
-  color:#6f502f;
+  color: #6f502f;
   background-color: var(--color-3);
   font-size: 14px;
   font-family: var(--fuente-2);
@@ -505,7 +511,7 @@ ul.lang-inv li a {
 
 ul.lang-inv li a:hover {
   text-decoration: none;
-  background:var(--color-4);
+  background: var(--color-4);
   color: #fff
 }
 
@@ -517,7 +523,7 @@ ul.lang-inv li a:hover {
 section.cuenta-regresiva {
   position: relative;
   height: 270px;
-  background:url(/public/img/pattern_fondo.png) repeat top center;
+  background: url(/public/img/pattern_fondo.png) repeat top center;
 }
 
 section.cuenta-regresiva .box-aros {
@@ -556,7 +562,7 @@ section.cuenta-regresiva .box-aros .box-circulo span.falta {
   font-weight: 300;
   font-size: 60px;
   line-height: 60px;
-  color:#6f502f;
+  color: #6f502f;
   margin-top: 25px;
 }
 
@@ -584,7 +590,7 @@ section.cuenta-regresiva .reloj-col.no-border {
 section.cuenta-regresiva .reloj-col span.number {
   display: inline-block;
   width: 100%;
-  color:#6f502f;
+  color: #6f502f;
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-regular);
   font-size: 40px;
@@ -615,7 +621,7 @@ section.cuenta-regresiva p.fin-cuenta {
 /* Ceremonia - Fiesta */
 
 section.ceremonia-fiesta {
-  background:url(/public/img/pattern_fondo.png) repeat top center;
+  background: url(/public/img/pattern_fondo.png) repeat top center;
   padding-bottom: 20%;
   position: relative;
 }
@@ -667,7 +673,7 @@ section.ceremonia-fiesta .col-civil h3 {
   font-family: var(--fuente-1);
   font-weight: var(--grosor-fuente-regular);
   font-size: 40px;
-  color:#6f502f;
+  color: #6f502f;
   background-color: #e3bf98;
   display: inline-block;
   position: relative;
@@ -755,6 +761,7 @@ section.ceremonia-fiesta .ondas-2 {
 
 section.ceremonia-fiesta .addeventatc .nameBtn {
   color: #ffffff;
+  font-size: large;
 }
 
 section.ceremonia-fiesta .addeventatc:hover .nameBtn {
@@ -773,7 +780,7 @@ section.galeria {
   padding-top: 50px;
   padding-bottom: 50px;
   position: relative;
-  background:url(/public/img/pattern_fondo.png) repeat top center;
+  background: url(/public/img/pattern_fondo.png) repeat top center;
 }
 
 section.galeria .anim-galeria {
@@ -905,7 +912,7 @@ section.fiesta .item-fiesta {
 
 
 section.fiesta .item-fiesta h3 {
-  color:#6f502f;
+  color: #6f502f;
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-bold);
   text-transform: uppercase;
@@ -913,10 +920,11 @@ section.fiesta .item-fiesta h3 {
 }
 
 section.fiesta .item-fiesta p {
-  color:#6f502f;
+  color: #6f502f;
   margin-bottom: 0;
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-regular);
+  font-size: 1.5rem;
 }
 
 section.fiesta .item-fiesta a.boton {
@@ -966,7 +974,7 @@ section.fiesta .item-fiesta .adorno.adorno-2 {
 
 
 section.regalos {
-  background:url(/public/img/pattern_fondo.png) repeat top center;
+  background: url(/public/img/pattern_fondo.png) repeat top center;
   padding-top: 14%;
   position: relative;
   padding-bottom: 10%
@@ -1091,7 +1099,7 @@ section.instagram:after {
 
 section.footer {
   position: relative;
-  background:url(/public/img/pattern_fondo.png) repeat top center;
+  background: url(/public/img/pattern_fondo.png) repeat top center;
   padding-bottom: 10%;
   padding-top: 10%;
   margin-top: -2px;
@@ -1108,7 +1116,7 @@ section.footer h4 {
 
 section.footer h4 span {
   background-color: var(--color-3);
-  color:#ffffff;
+  color: #ffffff;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1121,6 +1129,7 @@ section.footer h4 span {
   position: relative;
   top: -10px;
 }
+
 section.footer h4 .icono:before {
   left: 65px;
   background: var(--color-8);
@@ -1238,12 +1247,15 @@ footer p a:hover {
 
 /* ---------- */
 
-.modal-body h2{
-  color: var(--color-6);
+.modal-body h2 {
+  color: #c48746;
+  font-family: serif;
 }
-.modal-body p{
+
+.modal-body p {
   color: var(--color-4);
 }
+
 .modal-dialog {
   font-family: var(--fuente-2);
 }
@@ -1394,7 +1406,7 @@ footer p a:hover {
 }
 
 .modal .modal-content-2 .close:hover {
-  background:var(--color-4);
+  background: var(--color-4);
   color: var(--color-4);
   opacity: 1;
 }
@@ -1403,6 +1415,7 @@ footer p a:hover {
   display: inline-block;
   width: 100%;
   height: 100%;
+  font-size: 2rem;
 }
 
 .modal .modal-content-2 .modal-header {
@@ -1602,7 +1615,7 @@ footer p a:hover {
   left: 0;
   width: 100%;
   height: auto;
-  background:url(/public/img/pattern_fondo.png) repeat top center;
+  background: url(/public/img/pattern_fondo.png) repeat top center;
   z-index: 9999;
   padding: 0;
   margin: 0;
@@ -1632,6 +1645,6 @@ footer p a:hover {
 
 .banner-contacto-web a:first-child:hover {
   text-decoration: none;
-  color:#6f502f;
+  color: #6f502f;
   background-color: #fff;
 }

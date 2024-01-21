@@ -1,13 +1,15 @@
 /* Mobile */
 @media only screen and (max-width: 767px) {
-
+  *{
+    font-size: 16px;
+  }
   #modalMusica .modal-content p {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 40px;
   }
 
   #modalMusica .modal-content p+span {
-    font-size: 15px
+    font-size: 1rem;
   }
 
   #modalMusica .modal-content .boton {
@@ -16,20 +18,20 @@
   }
 
   .title {
-    font-size: 50px;
+    font-size: 3rem;
     line-height: 45px;
     padding: 0 15px;
   }
 
   .subtitle {
-    font-size: 19px;
+    font-size: 1.5rem;
     padding: 0 15px;
     margin-top: 25px;
   }
 
 
   section.portada .content-portada h1 {
-    font-size: 75px;
+    font-size: 3.5rem;
     line-height: 75px;
   }
 
@@ -83,7 +85,7 @@
   }
 
   section.portada .box-nombres-fecha-portada h1 span {
-    font-size: 40px;
+    font-size: 2.5rem;
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -103,13 +105,13 @@
   }
 
   section.portada .content-portada span.fecha {
-    font-size: 25px;
+     font-size: 2rem;;
     margin-bottom: 35px;
     margin-top: 0
   }
 
   section.portada .box-frase-portada p {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 
   section.portada .box-frase-portada {
@@ -122,21 +124,21 @@
   }
 
   section.cuenta-regresiva .box-aros .box-circulo span.falta {
-    font-size: 50px;
+    font-size: 3rem;
     margin-top: 10px;
   }
 
   section.cuenta-regresiva .reloj-col span.number {
-    font-size: 35px;
+    font-size: 2rem;
   }
 
   section.footer h4 {
-    font-size: 65px;
+    font-size:2.5rem;
     line-height: 45px;
   }
 
   section.footer h4 span {
-    font-size: 30px;
+    font-size: 2rem;
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -151,7 +153,7 @@
   }
 
   section.cuenta-regresiva .reloj-col span.time {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
 
@@ -166,7 +168,7 @@
   section.ceremonia-fiesta .col-fiesta h3,
   section.ceremonia-fiesta .col-civil h3 {
     padding: 8px 30px;
-    font-size: 45px
+    font-size: 2.5rem;
   }
 
   section.ceremonia-fiesta .col-ceremonia .anim-anillos,
@@ -247,7 +249,7 @@
   }
 
   #modalMapa .modal-header .modal-title {
-    font-size: 35px;
+    font-size: 3rem;
     margin-top: 10px;
   }
 
@@ -273,7 +275,7 @@
   }
 
   section.instagram .hashtag {
-    font-size: 45px;
+    font-size: 2.5rem;
   }
 
   section.instagram:after {
@@ -353,8 +355,7 @@
   }
 
   .modal .modal-content-2 .modal-header .modal-title {
-    font-size: 35px;
-    line-height: 32px;
+    font-size: 3rem;
     font-family: var(--fuente-1);
     font-weight: var(--grosor-fuente-regular);
   }

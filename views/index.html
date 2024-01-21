@@ -41,8 +41,8 @@
 
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="/public/img/faviconit/favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="/public/img/faviconit/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/public/img/faviconit/favicon.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 64x64" href="/public/img/faviconit/favicon.ico">
     <link rel="icon" type="image/png" sizes="196x196" href="/public/img/faviconit/favicon-192.png">
     <link rel="icon" type="image/png" sizes="160x160" href="/public/img/faviconit/favicon-160.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/public/img/faviconit/favicon-96.png">
@@ -123,10 +123,10 @@
 
 </head>
 
-<body class="" cz-shortcut-listen="true" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<body onload="playAudio()" cz-shortcut-listen="true" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
 
     <audio autoplay loop id="musicMP3" data-evento="play">
-        <source src="/public/mp3/instrumental.mpeg" type="audio/mpeg">
+        <source src="/public/mp3/instrumental.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Loader -->
@@ -213,9 +213,9 @@
 
                             <div class="box-frase-portada">
                                 <p>
-                                    <img src="/public/img/comilla-apertura.svg" alt=""> <br>
+                                    <img src="/public/img/comilla-apertura.svg" alt="">
 
-                                    Todos somos mortales, <br> hasta el primer beso y la segunda copa de vino <br>
+                                    El mejor tipo de amor es el que despierta el alma y nos hace aspirar a más. Que enciende fuego en nuestros corazones y nos trae paz a la mente
 
                                     <img src="/public/img/comilla-cierre.svg" alt="">
                                 </p>
@@ -426,7 +426,7 @@
 
                 <div class="col-md-12">
                     <h2 class="title">Fiesta</h2>
-                    <p class="subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+                    <p class="subtitle">Hagamos juntos una fiesta inolvidable. Aquí algunos detalles a tener en cuenta.</p>
                     <br>
                     <br>
                 </div>
@@ -538,8 +538,7 @@
 
                 <h2 class="title">Regalos</h2>
                 <p class="subtitle">
-                    El mejor regalo es tu compañía en este día tan especial para nosotros.
-                    Pero si deseas darnos un obsequio puedes ayudarnos con nuestra Luna de Miel.
+                    Tu presencia y compañía son un regalo, y es lo que más valoramos en este día tan especial. Sin embargo, si te gustaría contribuir a nuestro proyecto futuro, hemos creado una opción y estaríamos muy agradecidos.
                 </p>
 
 
@@ -558,7 +557,7 @@
     </section>
     <!-- Instagram-->
     <section class="instagram"
-        style="background-image: url(&quot;/public/img/instagram_mobile.webp&quot;); background-size: cover; background-position: center center;">
+        style="background-image: url(&quot;/public/img/alianzas.jpg&quot;); background-size: cover; background-position: center center;">
 
 
         <div class="container">
@@ -684,11 +683,11 @@
 
                         <h2>Catering🍽️</h2>
 
-                        <p> Recepcion <br>
-                            Entrada <br>
-                            Plato Fuerte <br>
-                            Postre <br>
-                            Bebidas 🍷🍻🍹
+                        <p> ◈Recepcion <br>
+                            ◈Entrada <br>
+                            ◈Plato Fuerte <br>
+                            ◈Postre <br>
+                            ◈Bebida
                         </p>
                         <h2>Dj en Vivo🎶</h2>
 
@@ -752,16 +751,16 @@
                             <br>
                             Menores: Gratis
                         </p>
-                        <h2 class="h2-modal">Fecha límite de pago:</h2>
+                        <h2 class="h2-modal text-break">Confirmar presencia haciendo deposito hasta:</h2>
                         <p>
                             8 de Febrero del 2024
-                        <h2 class="h2-modal">Datos para el pago:</h2>
-                        <p>
-                            CVU: 4530000800010621083649
+                        <h2 class="h2-modal">Datos de la cuenta:</h2>
+                        <p class="text-break">
+                            <b>CVU:</b> 4530000800010621083649
                             <br>
-                            Alias: Mjs.Jma.14
+                            <b>Alias:</b> Mjs.Jma.14
                             <br>
-                            CUIT/CUIL: 27417481481
+                            <b>CUIT/CUIL:</b> 27417481481
                             <br>
                             Naranja X
                         </p>
@@ -815,20 +814,16 @@
                     </div>
 
 
-
-                    <div class="modal-header">
-
-                        <h5 class="modal-title">Regalos</h5>
-
-                    </div>
-
                     <div class="modal-body">
-                        <p>
-                            CVU: 0000076500000012070466
+                        <p class="text-center p-0 text-break">
+                            <b>CVU:</b>
+                            0000076500000012070466
                             <br>
-                            Alias: Jma.Mjs.14
+                            <b>Alias:</b>
+                            Jma.Mjs.14
                             <br>
-                            CUIT/CUIL: 20401701991
+                            <b>CUIT/CUIL:</b>
+                            20401701991
                             <br>
                             PersonalPay
                         </p>
@@ -1508,18 +1503,18 @@
 
             // Aceptar webp?
             if (support_format_webp()) {
-                var imageInstagramParallax = '/public/img/instagram_mobile.webp';
+                var imageInstagramParallax = '/public/img/alianzas.jpg';
             } else {
-                var imageInstagramParallax = '/public/img/instagram_mobile.jpg';
+                var imageInstagramParallax = '/public/img/alianzas.jpg';
             }
 
         } else {
 
             // Aceptar webp?
             if (support_format_webp()) {
-                var imageInstagramParallax = '/public/img/instagram.webp';
+                var imageInstagramParallax = '/public/img/alianzas.jpg';
             } else {
-                var imageInstagramParallax = '/public/img/instagram.jpg';
+                var imageInstagramParallax = '/public/img/alianzas.jpg';
             }
 
         }
