@@ -5,7 +5,7 @@
   --color-1: #3F3F3D;
   --color-2: #7D735D;
   --color-3: #BAA67C;
-  --color-4: #E6C6A3;
+  --color-4: #a06a2f;
   --color-5: #AF8566;
   --color-9: #E5E9D0;
 
@@ -47,7 +47,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-1);
+  background:var(--color-4);
 }
 
 .custom-control-label::before {
@@ -76,14 +76,14 @@
 }
 
 .fancybox-bg {
-  background-color: var(--color-1) !important;
+  background:var(--color-2) !important;
 }
 
 .boton {
-  color: #3f3f3d;
+  color: #ffffff;
   font-size: larger;
   font-weight: 600;
-  background: var(--color-3);
+  background: #cd9f7a;
   text-transform: capitalize;
   border-radius: 50px;
   line-height: 15px;
@@ -100,6 +100,7 @@
 }
 .h2-modal{
   font-family: initial;
+  color:#6f502f;
 }
 .boton:hover {
   background: var(--color-5);
@@ -142,8 +143,8 @@ a {
 
 /* Fondo modales */
 .modal-backdrop {
-  background-color: var(--color-1);
-  opacity: 0.95 !important;
+  background:var(--color-5);
+  
 }
 
 .modal-body {
@@ -241,7 +242,7 @@ a {
 
 .preloader-area {
   position: fixed;
-  background: var(--color-1);
+  background:url(/public/img/pattern_fondo.png) repeat top center;
   z-index: 11000;
   height: 100%;
   width: 100%;
@@ -278,7 +279,7 @@ section.portada .portada-picture {
 
 section.portada .portada-container {
   width: 45%;
-  background: var(--color-1);
+  background: url(/public/img/pattern_fondo.png) repeat top center;
   padding-bottom: 60px;
   position: relative;
 }
@@ -286,7 +287,7 @@ section.portada .portada-container {
 section.portada .portada-container .portada-container-2 {
   width: 100%;
   max-width: 610px;
-  background: var(--color-1);
+  background: url(/public/img/pattern_fondo.png) repeat top center;
   padding-bottom: 60px;
   position: relative;
 }
@@ -321,7 +322,7 @@ section.portada .portada-picture::after {
 }
 
 section.portada::after {
-  background-image: url('../img/img_ondas01.svg');
+  background-image: url('../img/img_ondas0.svg');
   position: absolute;
   content: '';
   background-repeat: no-repeat;
@@ -390,7 +391,7 @@ section.portada .content-portada span.fecha {
   font-weight: var(--grosor-fuente-regular);
   font-size: 25px;
   line-height: 25px;
-  color: var(--color-3);
+  color: #a2864d;
   padding: 0 30px 7px;
   margin-bottom: 35px;
   margin-top: 40px;
@@ -449,7 +450,9 @@ section.portada .box-nombres-fecha-portada h1:nth-of-type(2) {
 section.portada .box-nombres-fecha-portada h1+span {
   background-color: var(--color-3);
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -457,9 +460,8 @@ section.portada .box-nombres-fecha-portada h1+span {
   font-size: 40px;
   font-family: var(--fuente-1);
   font-weight: var(--grosor-fuente-regular);
-  color: var(--color-1)
+  color: #ffffff;
 }
-
 section.portada .box-frase-portada {
   margin-top: 25px;
 }
@@ -469,7 +471,7 @@ section.portada .box-frase-portada p {
   font-weight: var(--grosor-fuente-regular);
   font-size: 22px;
   text-align: center;
-  color: var(--color-3);
+  color: #877653;
 }
 
 section.portada .box-frase-portada p img {
@@ -488,7 +490,7 @@ ul.lang-inv li {
 }
 
 ul.lang-inv li a {
-  color: var(--color-1);
+  color:#6f502f;
   background-color: var(--color-3);
   font-size: 14px;
   font-family: var(--fuente-2);
@@ -503,7 +505,7 @@ ul.lang-inv li a {
 
 ul.lang-inv li a:hover {
   text-decoration: none;
-  background: var(--color-1);
+  background:var(--color-4);
   color: #fff
 }
 
@@ -515,7 +517,7 @@ ul.lang-inv li a:hover {
 section.cuenta-regresiva {
   position: relative;
   height: 270px;
-  background-color: var(--color-1);
+  background:url(/public/img/pattern_fondo.png) repeat top center;
 }
 
 section.cuenta-regresiva .box-aros {
@@ -554,7 +556,7 @@ section.cuenta-regresiva .box-aros .box-circulo span.falta {
   font-weight: 300;
   font-size: 60px;
   line-height: 60px;
-  color: var(--color-1);
+  color:#6f502f;
   margin-top: 25px;
 }
 
@@ -582,7 +584,7 @@ section.cuenta-regresiva .reloj-col.no-border {
 section.cuenta-regresiva .reloj-col span.number {
   display: inline-block;
   width: 100%;
-  color: var(--color-1);
+  color:#6f502f;
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-regular);
   font-size: 40px;
@@ -591,7 +593,6 @@ section.cuenta-regresiva .reloj-col span.number {
 section.cuenta-regresiva .reloj-col span.time {
   display: inline-block;
   width: 100%;
-  color: var(--color-1);
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-regular);
   font-size: 18px;
@@ -614,7 +615,7 @@ section.cuenta-regresiva p.fin-cuenta {
 /* Ceremonia - Fiesta */
 
 section.ceremonia-fiesta {
-  background: url(../img/img_lineas01.svg) center 0 no-repeat var(--color-1);
+  background:url(/public/img/pattern_fondo.png) repeat top center;
   padding-bottom: 20%;
   position: relative;
 }
@@ -666,8 +667,8 @@ section.ceremonia-fiesta .col-civil h3 {
   font-family: var(--fuente-1);
   font-weight: var(--grosor-fuente-regular);
   font-size: 40px;
-  color: var(--color-1);
-  background-color: var(--color-4);
+  color:#6f502f;
+  background-color: #e3bf98;
   display: inline-block;
   position: relative;
   min-width: 70%;
@@ -717,7 +718,7 @@ section.ceremonia-fiesta .info-col .info-box {
 section.ceremonia-fiesta .info-col .info-box h6 {
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-bold);
-  color: var(--color-9);
+  color: var(--color-6);
   font-size: 25px;
   text-transform: uppercase;
 }
@@ -753,7 +754,7 @@ section.ceremonia-fiesta .ondas-2 {
 }
 
 section.ceremonia-fiesta .addeventatc .nameBtn {
-  color: #3f3f3d;
+  color: #ffffff;
 }
 
 section.ceremonia-fiesta .addeventatc:hover .nameBtn {
@@ -772,7 +773,7 @@ section.galeria {
   padding-top: 50px;
   padding-bottom: 50px;
   position: relative;
-  background-color: var(--color-1);
+  background:url(/public/img/pattern_fondo.png) repeat top center;
 }
 
 section.galeria .anim-galeria {
@@ -849,8 +850,8 @@ section.galeria .slick-dots li.slick-active button:before {
 /* Fiesta */
 
 section.fiesta {
-  background: url('../img/img_ondas03.svg') center top no-repeat var(--color-1);
-  padding-top: 14%;
+  background: url(/public/img/pattern_fondo.png) repeat top center;
+  padding-top: 10%;
   position: relative;
   padding-bottom: 17%;
 }
@@ -904,7 +905,7 @@ section.fiesta .item-fiesta {
 
 
 section.fiesta .item-fiesta h3 {
-  color: var(--color-1);
+  color:#6f502f;
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-bold);
   text-transform: uppercase;
@@ -912,7 +913,7 @@ section.fiesta .item-fiesta h3 {
 }
 
 section.fiesta .item-fiesta p {
-  color: var(--color-1);
+  color:#6f502f;
   margin-bottom: 0;
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-regular);
@@ -924,7 +925,7 @@ section.fiesta .item-fiesta a.boton {
 
 
 section.fiesta .item-fiesta .content-item-fiesta {
-  background-color: var(--color-4);
+  background-color: #d9b694;
   padding: 40px 25px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -965,7 +966,7 @@ section.fiesta .item-fiesta .adorno.adorno-2 {
 
 
 section.regalos {
-  background-color: var(--color-1);
+  background:url(/public/img/pattern_fondo.png) repeat top center;
   padding-top: 14%;
   position: relative;
   padding-bottom: 10%
@@ -1090,7 +1091,7 @@ section.instagram:after {
 
 section.footer {
   position: relative;
-  background-color: var(--color-1);
+  background:url(/public/img/pattern_fondo.png) repeat top center;
   padding-bottom: 10%;
   padding-top: 10%;
   margin-top: -2px;
@@ -1107,8 +1108,10 @@ section.footer h4 {
 
 section.footer h4 span {
   background-color: var(--color-3);
-  color: var(--color-1);
-  display: inline-block;
+  color:#ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   width: 45px;
   height: 45px;
@@ -1117,6 +1120,17 @@ section.footer h4 span {
   font-family: var(--fuente-1);
   position: relative;
   top: -10px;
+}
+section.footer h4 .icono:before {
+  left: 65px;
+  background: var(--color-8);
+  background: linear-gradient(90deg, var(--color-8) 0%, var(--color-7) 50%, var(--color-6) 100%);
+}
+
+section.footer h4 .icono:after {
+  right: 65px;
+  background: var(--color-8);
+  background: linear-gradient(90deg, var(--color-6) 0%, var(--color-7) 50%, var(--color-8) 100%);
 }
 
 section.footer .col-acciones-footer ul {
@@ -1224,7 +1238,12 @@ footer p a:hover {
 
 /* ---------- */
 
-
+.modal-body h2{
+  color: var(--color-6);
+}
+.modal-body p{
+  color: var(--color-4);
+}
 .modal-dialog {
   font-family: var(--fuente-2);
 }
@@ -1307,7 +1326,6 @@ footer p a:hover {
 /* Modales */
 
 .modal .modal-content {
-  background-color: var(--color-1);
   text-align: center;
   border: none;
   padding: 10px;
@@ -1320,10 +1338,13 @@ footer p a:hover {
 
 }
 
+/* .mi-modal{
+  background-color: #AF8566;
+} */
 .modal .modal-content-2 {
   position: relative;
   border: double 2px transparent;
-  background-image: linear-gradient(var(--color-1), var(--color-1)), radial-gradient(circle at bottom left, var(--color-6), var(--color-7), var(--color-8));
+  background-image: linear-gradient(url(/public/img/pattern_fondo.png) repeat top center, url(/public/img/pattern_fondo.png) repeat top center), radial-gradient(circle at bottom left, var(--color-6), var(--color-7), var(--color-8));
   background-origin: border-box;
   background-clip: content-box,
     border-box;
@@ -1333,9 +1354,10 @@ footer p a:hover {
 }
 
 .modal .modal-content-2 p {
-  color: var(--color-3);
+  color: #9c5825;
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-regular);
+  font-size: 1.5rem;
 }
 
 .modal .modal-content-2 .img-top-modal {
@@ -1372,7 +1394,7 @@ footer p a:hover {
 }
 
 .modal .modal-content-2 .close:hover {
-  background-color: var(--color-1);
+  background:var(--color-4);
   color: var(--color-4);
   opacity: 1;
 }
@@ -1391,7 +1413,7 @@ footer p a:hover {
 
 .modal .modal-content-2 .modal-header .modal-title {
   font-size: 40px;
-  font-family: var(--fuente-3);
+  font-family: var(--fuente-1);
   font-weight: var(--grosor-fuente-regular)
 }
 
@@ -1580,7 +1602,7 @@ footer p a:hover {
   left: 0;
   width: 100%;
   height: auto;
-  background: var(--color-1);
+  background:url(/public/img/pattern_fondo.png) repeat top center;
   z-index: 9999;
   padding: 0;
   margin: 0;
@@ -1610,6 +1632,6 @@ footer p a:hover {
 
 .banner-contacto-web a:first-child:hover {
   text-decoration: none;
-  color: var(--color-1);
+  color:#6f502f;
   background-color: #fff;
 }
