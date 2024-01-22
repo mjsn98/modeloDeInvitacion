@@ -924,7 +924,7 @@ section.fiesta .item-fiesta p {
   margin-bottom: 0;
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-regular);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 section.fiesta .item-fiesta a.boton {
@@ -1106,15 +1106,15 @@ section.footer {
 }
 
 
-section.footer h4 {
+section.footer h1 {
   width: 100%;
   text-align: center;
   font-family: var(--fuente-1);
-  font-size: 85px;
+  font-size: 3.5rem;
   color: var(--color-4);
 }
 
-section.footer h4 span {
+section.footer h1 span {
   background-color: var(--color-3);
   color: #ffffff;
   display: inline-flex;
@@ -1124,19 +1124,19 @@ section.footer h4 span {
   width: 45px;
   height: 45px;
   line-height: 45px;
-  font-size: 35px;
+  font-size: 3rem;
   font-family: var(--fuente-1);
   position: relative;
   top: -10px;
 }
 
-section.footer h4 .icono:before {
+section.footer h1 .icono:before {
   left: 65px;
   background: var(--color-8);
   background: linear-gradient(90deg, var(--color-8) 0%, var(--color-7) 50%, var(--color-6) 100%);
 }
 
-section.footer h4 .icono:after {
+section.footer h1 .icono:after {
   right: 65px;
   background: var(--color-8);
   background: linear-gradient(90deg, var(--color-6) 0%, var(--color-7) 50%, var(--color-8) 100%);
@@ -1250,6 +1250,7 @@ footer p a:hover {
 .modal-body h2 {
   color: #c48746;
   font-family: serif;
+  font-weight: bold;
 }
 
 .modal-body p {
@@ -1369,7 +1370,7 @@ footer p a:hover {
   color: #9c5825;
   font-family: var(--fuente-2);
   font-weight: var(--grosor-fuente-regular);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .modal .modal-content-2 .img-top-modal {

@@ -24,7 +24,7 @@
   }
 
   .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0 15px;
     margin-top: 25px;
   }
@@ -85,7 +85,7 @@
   }
 
   section.portada .box-nombres-fecha-portada h1 span {
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -132,13 +132,13 @@
     font-size: 2rem;
   }
 
-  section.footer h4 {
-    font-size:2.5rem;
+  section.footer h1 {
+    font-size:3.5rem;
     line-height: 45px;
   }
 
-  section.footer h4 span {
-    font-size: 2rem;
+  section.footer h1 span {
+    font-size: 3rem;
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -249,7 +249,7 @@
   }
 
   #modalMapa .modal-header .modal-title {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 10px;
   }
 
@@ -355,7 +355,7 @@
   }
 
   .modal .modal-content-2 .modal-header .modal-title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: var(--fuente-1);
     font-weight: var(--grosor-fuente-regular);
   }
