@@ -1141,6 +1141,18 @@
             }
         }
     </script>
+    <script>
+        window.onload = function () {
+
+            var isSamsungBrowser = navigator.userAgent.match(/SamsungBrowser/i) !== null;
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (isSamsungBrowser && isMobile) {
+                
+                alert("¡Atención! Estás utilizando la aplicación en el navegador de Samsung. Lo que puede afectar su experiencia visual, oscureciendo la pagina. Si es asi abrir con Google Chrome o Cambiar a Modo Claro");
+            }
+        };
+    </script>
 
 
 
