@@ -260,6 +260,9 @@
   section.ceremonia-fiesta .info-col .info-box a.boton {
     min-width: 80%;
   }
+  section.ceremonia-fiesta .info-col .info-box span.boton {
+    min-width: 80%;
+  }
 
   section.fiesta .fiesta-flor-izq {
     max-width: 25%;
@@ -285,7 +288,11 @@
   section.fiesta .item-fiesta a.boton {
     min-width: 100%
   }
-
+  
+  section.fiesta .item-fiesta span.boton {
+    min-width: 100%
+  }
+  
   #controlador-musica {
     top: initial;
     bottom: 0;

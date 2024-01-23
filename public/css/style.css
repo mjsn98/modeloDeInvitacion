@@ -720,6 +720,18 @@ section.ceremonia-fiesta .info-col {
 section.ceremonia-fiesta .info-col .info-box {
   margin-bottom: 45px;
 }
+.z-3{
+  z-index: 1;
+}
+
+.confirmar-box .boton{
+  background-color: var(--color-4);
+  border-radius: 10px;
+  box-shadow: 12px 10px 12px rgb(38 21 21 / 82%);
+}
+.confirmar-box .boton:hover{
+  background-color: var(--color-6);
+}
 
 section.ceremonia-fiesta .info-col .info-box h6 {
   font-family: var(--fuente-2);
@@ -741,7 +753,11 @@ section.ceremonia-fiesta .info-col .info-box a.boton {
   display: inline-block;
   width: 50%;
 }
-
+section.ceremonia-fiesta .info-col .info-box span.boton {
+  margin-top: 5px;
+  display: inline-block;
+  width: 50%;
+}
 section.ceremonia-fiesta:after {
   background-image: url('../img/img_ondas02.svg');
   position: absolute;
@@ -931,7 +947,9 @@ section.fiesta .item-fiesta a.boton {
   width: 85%
 }
 
-
+section.fiesta .item-fiesta span.boton {
+  width: 85%
+}
 section.fiesta .item-fiesta .content-item-fiesta {
   background-color: #d9b694;
   padding: 40px 25px;
