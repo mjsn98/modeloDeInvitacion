@@ -118,6 +118,17 @@
         .addeventatc .transp {
             display: none !important;
         }
+
+        .mi-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
     </style>
 
 
@@ -125,6 +136,62 @@
 </head>
 
 <body cz-shortcut-listen="true" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+
+
+
+    <div id="myModal" class="modal mi-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-content-2">
+
+                    <picture>
+                        <source type="image/webp" srcset="public/img/flores_Grupo04_A.webp">
+                        <source type="image/png" srcset="public/img/flores_Grupo04_A.png">
+                        <img class="adorno adorno-1 aos-init aos-animate" data-aos="fade-right" data-aos-delay="300"
+                            data-aos-duration="1000" data-aos-once="false" src="public/img/flores_Grupo04_A.png" alt=""
+                            loading="lazy">
+                    </picture>
+
+
+                    <picture>
+                        <source type="image/webp" srcset="public/img/flores_Grupo04_B.webp">
+                        <source type="image/png" srcset="public/img/flores_Grupo04_B.png">
+                        <img class="adorno adorno-2 aos-init aos-animate" data-aos="fade-right" data-aos-delay="400"
+                            data-aos-duration="1000" data-aos-once="false" src="public/img/flores_Grupo04_B.png" alt=""
+                            loading="lazy">
+                    </picture>
+
+
+                    <div class="img-top-modal d-flex justify-content-center align-items-start">
+                        
+                        <button type="button" onclick="cerrarModal()" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <div class="white-circle-icon">
+                            <img class="" src="public/img/img_circuloCeremonia.svg" alt="">
+                        </div>
+
+                    </div>
+
+
+                    <div class="modal-header">
+
+                        <h5 class="h1-civil">Civil</h5>
+
+                    </div>
+
+                    <div class="modal-body ">
+
+                        <h2 class="h2-civil">📆14 de Febrero 2024  11:00hs</h2>
+                        <h2 class="h2-civil">📍Av. Belgrano Y Andes</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <audio autoplay loop id="musicMP3" data-evento="play">
         <source src="public/mp3/instrumental.mp3" type="audio/mpeg">
@@ -345,7 +412,9 @@
                         <div class="info-box">
                             <h6>Día</h6>
                             <p>Sábado 24 de Febrero - 21:00hs</p>
-                            <span href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Iglesia%E2%9B%AA+Santill%C3%A1n+%F0%9F%92%8D+Ar%C3%A9valo&dates=20240224T210000/20240224T220000&ctz=America/Argentina/Cordoba&details=%0A%0A------%0A%0APowered+by+addevent.com+%0AShare+your+next+event+with+us!%0A&location&pli=1&uid=1706021041addeventcom&sf=true&output=xml" class="boton addeventatc" id="addeventatc1" title="" aria-haspopup="true"
+                            <span
+                                href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Iglesia%E2%9B%AA+Santill%C3%A1n+%F0%9F%92%8D+Ar%C3%A9valo&dates=20240224T210000/20240224T220000&ctz=America/Argentina/Cordoba&details=%0A%0A------%0A%0APowered+by+addevent.com+%0AShare+your+next+event+with+us!%0A&location&pli=1&uid=1706021041addeventcom&sf=true&output=xml"
+                                class="boton addeventatc" id="addeventatc1" title="" aria-haspopup="true"
                                 aria-expanded="false" tabindex="0" translate="no" data-loaded="true"
                                 style="visibility: visible;">
 
@@ -412,9 +481,10 @@
                 </div>
 
                 <div class="confirmar-box d-flex w-100 h-50 text-align z-3 justify-content-center mt-2">
-                    <a href="#" data-evento="Fiesta" class=" text-center boton confirmar-asistencia w-80">Confirmar asistencia</a>
+                    <a href="#" data-evento="Fiesta" class=" text-center boton confirmar-asistencia w-80">Confirmar
+                        asistencia</a>
                 </div>
-                
+
 
 
             </div>
@@ -1055,20 +1125,11 @@
         // Idioma
         var langJs = "es"
 
-
-
         // Idioma js en MODELO e INVITACION
         var langJsVariante = "es-AR";
 
-
-
-
-
-
         // Cuenta regresiva
         var fechaCuentaRegresiva = "02/24/2024 22:30:00";
-
-
 
     </script>
 
@@ -1087,6 +1148,20 @@
             var device = 'mobile';
         } else {
             var device = 'desktop';
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            abrirModal();
+        });
+
+        function abrirModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+
+        function cerrarModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
         }
     </script>
 

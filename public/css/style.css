@@ -553,7 +553,7 @@ section.cuenta-regresiva .box-aros .box-circulo {
   padding: 20px;
 }
 
-section.cuenta-regresiva .box-aros .box-circulo span.falta {
+section.cuenta-regresiva .box-aros .box-circulo span.falta,.h1-civil {
   width: 100%;
   text-align: center;
   display: inline-block;
@@ -1270,7 +1270,11 @@ footer p a:hover {
   font-family: serif;
   font-weight: bold;
 }
-
+.h2-civil{
+  color: #c48746;
+  font-family: 'emoji' !important;
+  text-align: center;
+}
 .modal-body p {
   color: var(--color-4);
 }
