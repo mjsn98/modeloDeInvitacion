@@ -411,7 +411,7 @@
 
                         <div class="info-box">
                             <h6>Día</h6>
-                            <p>Sábado 24 de Febrero - 21:00hs</p>
+                            <p>Sábado 24 de Febrero - 21:45hs</p>
                             <span
                                 href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Iglesia%E2%9B%AA+Santill%C3%A1n+%F0%9F%92%8D+Ar%C3%A9valo&dates=20240224T210000/20240224T220000&ctz=America/Argentina/Cordoba&details=%0A%0A------%0A%0APowered+by+addevent.com+%0AShare+your+next+event+with+us!%0A&location&pli=1&uid=1706021041addeventcom&sf=true&output=xml"
                                 class="boton addeventatc" id="addeventatc1" title="" aria-haspopup="true"
@@ -430,10 +430,10 @@
 
                         <div class="info-box">
                             <h6>Lugar</h6>
-                            <p>A confirmar</p>
+                            <p>Parroquia La Inmaculada</p>
                             <h6>Dirección</h6>
-                            <p>A confirmar</p>
-                            <span href="#" data-evento="Ceremonia" class="boton modal-como-llegar">¿Cómo llegar?</span>
+                            <p>Independencia y Balcarce</p>
+                            <a href="#" data-evento="Ceremonia" class="boton modal-como-llegar">¿Cómo llegar?</a>
                         </div>
 
                     </div>
@@ -1587,9 +1587,9 @@
             if (evento == 'Ceremonia') {
                 $('#modalMapa .modal-title').text('Ceremonia');
 
-                $('#modalMapa .modal-body').html('');
+                $('#modalMapa .modal-body').html('<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d882.334246735005!2d-64.2488959!3d-27.7993963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b52075d006599%3A0xbd307c569de1806c!2sParroquia%20la%20Inmaculada!5e0!3m2!1ses!2sar!4v1707312726118!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>');
 
-                $('.ampliar-mapa').attr('href', '');
+                $('.ampliar-mapa').attr('href', 'https://www.google.com/maps/place/Parroquia+la+Inmaculada/@-27.7993963,-64.2488959,19.5z/data=!4m15!1m8!3m7!1s0x943b5200b265df23:0x97d0e8a2d38ba88f!2sIndependencia+%26+Balcarce,+Santiago+del+Estero!3b1!8m2!3d-27.7990522!4d-64.2482071!16s%2Fg%2F11h9qpm889!3m5!1s0x943b52075d006599:0xbd307c569de1806c!8m2!3d-27.7995664!4d-64.248524!16s%2Fg%2F1tj5m7n2?entry=ttu');
             }
 
             $('#modalMapa').modal({
