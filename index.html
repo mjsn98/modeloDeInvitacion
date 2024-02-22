@@ -176,14 +176,13 @@
 
                     <div class="modal-header">
 
-                        <h5 class="h1-civil">Civil</h5>
+                        <h5 class="h1-civil">Lista cerrada</h5>
 
                     </div>
 
                     <div class="modal-body ">
 
-                        <h2 class="h2-civil">📆14 de Febrero 2024  11:00hs</h2>
-                        <h2 class="h2-civil">📍Av. Belgrano Y Andes</h2>
+                        <h2 class="h2-civil">Ya se completaron los lugares disponibles</h2>
 
                     </div>
 
@@ -1146,7 +1145,19 @@
         } else {
             var device = 'desktop';
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            abrirModal();
+        });
 
+        function abrirModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+
+        function cerrarModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
     </script>
 
 
